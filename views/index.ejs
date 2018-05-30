@@ -11,7 +11,7 @@
         <input type="text" name="message_name"><br><br>
       </label>
       <label>Message:<br>
-        <input type="text" name="message_content"><br><br>
+        <textarea name="message_content" style="width:100%;"></textarea><br><br>
       </label>
     
       <input type="submit" value="Post message">
@@ -37,7 +37,7 @@
                 <% for(var comment of board_message.comments){ %>
                   <div style="border: solid 1px black; margin: 2px 15px 15px 2px; padding: 10px 10px 0px 10px;">
                     <label>Name: <%= comment.name %> </label>
-                    <p style="padding-bottom: 0px;">Comment: <%= comment.content %> </p><br>
+                    <p style="margin: 10px 0px 0px 0px;">Comment: <%= comment.content %> </p><br>
                   </div>
                 <% } %>
               <% } %>
@@ -49,7 +49,7 @@
                 <input type="text" name="comment_name"><br><br>
               </label>
               <label>Comment:<br>
-                <input type="text" name="comment_content"><br><br>
+                <textarea name="comment_content" style="width:98%;"></textarea><br><br>
               </label>
 
               <input type="submit" value="Post comment">
