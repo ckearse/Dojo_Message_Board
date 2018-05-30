@@ -18,8 +18,8 @@
     </form>
 
     <% if(messages.message_errors){ %>
-      <% for(var error in messages.message_errors){ %>
-        <p><%= error %></p>
+      <% for(var error of messages.message_errors){ %>
+          <p><%= error %></p>
       <% } %>
     <% } %>
 
@@ -30,7 +30,7 @@
         <% for(var board_message of board_messages){ %>
           <div style="padding-left: 15px;border: solid 1px black; margin: 5px;">
             <h3>Name: <%= board_message.name %></h3>
-            <h3>Content: <%= board_message.content %></h3>
+            <h3>Message: <%= board_message.content %></h3>
 
             <div>
               <% if(board_message.comments){ %>
